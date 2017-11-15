@@ -19,11 +19,6 @@ Phone.prototype.view = function() {
 };
 Phone.prototype.discount = function(value) {
    console.log(this.price -= value);
-   alert("marka telefonu: " + this.mark + ", " +
-        "model telefonu: " + this.model + ", " +
-        "kolor: " + this.color + ", " +
-        "cena: " + this.price + ", "
-    );
 };
 
 
@@ -37,12 +32,15 @@ var samsung = new Phone('Samsung', 's10', 'white', 2300);
 $('#jq-iphone').click(function() {
     iPhone.view();
     iPhone.discount(100);
+    iPhone.view();
 });
 $('#jq-nexus').click(function() {
     nexus.view();
     nexus.discount(320);
+    nexus.view();
 });
 $('#jq-samsung').click(function() {
     samsung.view();
     samsung.discount(430);
+    samsung.view();
 });
