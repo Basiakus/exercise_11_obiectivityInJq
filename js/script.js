@@ -6,31 +6,43 @@ function Phone(mark, model, color, price) {
 };
 
 Phone.prototype.view = function() {
-    console.log("marka telefonu: " + this.mark);
-    console.log("model telefonu: " + this.model);
-    console.log("kolor: " + this.color);
-    console.log("cena: " + this.price);
+    console.log('marka telefonu: ' + this.mark);
+    console.log('model telefonu: ' + this.model);
+    console.log('kolor: ' + this.color);
+    console.log('cena: ' + this.price);
 
-    alert("marka telefonu: " + this.mark + ", " +
+    alert('marka telefonu: ' + this.mark + ', ' +
+        "model telefonu: " + this.model + ', ' +
+        'kolor: ' + this.color + ', ' +
+        'cena: ' + this.price + ', '
+    );
+};
+Phone.prototype.discount = function(value) {
+   console.log(this.price -= value);
+   alert("marka telefonu: " + this.mark + ", " +
         "model telefonu: " + this.model + ", " +
         "kolor: " + this.color + ", " +
         "cena: " + this.price + ", "
-    )
+    );
 };
 
+
 var iPhone = new Phone('iPhone', 'X', 'black', 3000);
-var Nexus = new Phone("Nexus", 5, "black", 2000);
-var Samsung = new Phone("Samsung", "s10", 'white', 2300);
+var nexus = new Phone("Nexus", 5, 'black', 2000);
+var samsung = new Phone('Samsung', 's10', 'white', 2300);
 
 
 
 
 $('#jq-iphone').click(function() {
     iPhone.view();
+    iPhone.discount(100);
 });
 $('#jq-nexus').click(function() {
-    Nexus.view();
+    nexus.view();
+    nexus.discount(320);
 });
 $('#jq-samsung').click(function() {
-    Samsung.view();
+    samsung.view();
+    samsung.discount(430);
 });
