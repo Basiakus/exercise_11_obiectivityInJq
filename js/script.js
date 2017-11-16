@@ -17,8 +17,8 @@ Phone.prototype.view = function() {
         'cena: ' + this.price + ', '
     );
 };
-Phone.prototype.discount = function(value) {
-   console.log(this.price -= value);
+Phone.prototype.setDiscount = function(value) {
+    this.price -= value;
 };
 
 
@@ -31,16 +31,16 @@ var samsung = new Phone('Samsung', 's10', 'white', 2300);
 
 $('#jq-iphone').click(function() {
     iPhone.view();
-    iPhone.discount(100);
+    iPhone.setDiscount(100);
     iPhone.view();
 });
 $('#jq-nexus').click(function() {
     nexus.view();
-    nexus.discount(320);
+    nexus.setDiscount(320);
     nexus.view();
 });
 $('#jq-samsung').click(function() {
     samsung.view();
-    samsung.discount(430);
+    samsung.setDiscount(430);
     samsung.view();
 });
