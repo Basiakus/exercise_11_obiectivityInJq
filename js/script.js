@@ -18,7 +18,7 @@ Phone.prototype.view = function() {
     );
 };
 Phone.prototype.setDiscount = function(value) {
-    this.price -= value;
+    return this.price -= value;
 };
 
 
